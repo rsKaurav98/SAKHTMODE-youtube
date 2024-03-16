@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "SAKHTMODE",
+    "version": "0.0.1",
+    "description": "Focus on searched video and avoid distraction .",
+    "permissions": [
+       "activeTab",
+       "scripting"
+    ],
+
+    "host_permissions": [
+       "https://www.youtube.com/*"
+    ],
+    "background": {
+       "service_worker": "background.js"
+    },
+    "content_scripts": [
+       {
+         "matches": ["https://www.youtube.com/*"],
+         "js": ["content.js"]
+       }
+    ],
+    "action": {
+  
+       "default_popup": "popup.html"
+    },
+    "icons":{
+      "128":"logo.png"
+    }
+      
+   }
+   
